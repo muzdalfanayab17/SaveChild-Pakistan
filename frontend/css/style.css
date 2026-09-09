@@ -1,0 +1,451 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #243447;
+    background: #f7fafc;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 20px 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #e8edf2;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #26384a;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #167c80;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 620px;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(
+        135deg,
+        #eaf8f7 0%,
+        #f7fbff 55%,
+        #eef5ff 100%
+    );
+}
+
+.hero h1 {
+    max-width: 800px;
+    font-size: 58px;
+    line-height: 1.1;
+    color: #17324d;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    max-width: 720px;
+    font-size: 19px;
+    color: #526579;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero a {
+    display: inline-block;
+    padding: 14px 25px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #167c80;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(22, 124, 128, 0.18);
+}
+
+.hero a:hover {
+    background: #105f63;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 7%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 38px;
+    color: #17324d;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    color: #5c6d7e;
+    font-size: 17px;
+}
+
+.about h3 {
+    font-size: 25px;
+    color: #167c80;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    padding: 90px 7%;
+    background: #ffffff;
+}
+
+.features > h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #17324d;
+    margin-bottom: 50px;
+}
+
+.feature-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px;
+    background: #f8fbfc;
+    border: 1px solid #e5ecef;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(30, 60, 80, 0.10);
+}
+
+.feature-card h3 {
+    color: #17324d;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #657585;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 55px 7%;
+    background: #17324d;
+    color: white;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #d4e0e8;
+    margin: 10px 0;
+}
+
+footer nav {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: static;
+    padding: 20px 0;
+}
+
+footer nav a {
+    color: #d4e0e8;
+}
+
+footer nav a:hover {
+    color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .features > h2 {
+        font-size: 30px;
+    }
+}
+/* =========================
+   FAQ
+========================= */
+
+.faq-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 7%;
+}
+
+.faq-section > h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #17324d;
+    margin-bottom: 45px;
+}
+
+.faq-card {
+    background: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 18px;
+    border: 1px solid #e5ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(30, 60, 80, 0.06);
+}
+
+.faq-card h2 {
+    color: #17324d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faq-card p {
+    color: #657585;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.faq-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(30, 60, 80, 0.10);
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   FAQ MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .faq-section {
+        padding: 60px 5%;
+    }
+
+    .faq-section > h1 {
+        font-size: 32px;
+    }
+
+    .faq-card {
+        padding: 20px;
+    }
+
+    .faq-card h2 {
+        font-size: 18px;
+    }
+}
+.faq-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 7%;
+}
+
+.faq-section > h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #17324d;
+    margin-bottom: 40px;
+}
+
+.faq-section details {
+    background: #ffffff;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    border: 1px solid #e5ecef;
+    border-radius: 12px;
+}
+
+.faq-section summary {
+    color: #17324d;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq-section details p {
+    color: #657585;
+    margin-top: 15px;
+    line-height: 1.7;
+}/* =========================
+   AUTH
+========================= */
+
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    background: white;
+    border: 1px solid #e5ecef;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(30, 60, 80, 0.08);
+}
+
+.auth-form h1 {
+    text-align: center;
+    color: #17324d;
+    margin-bottom: 25px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #26384a;
+    font-weight: 600;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d9e2e8;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #167c80;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background: #105f63;
+}
+
+.auth-form p {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.auth-form a {
+    color: #167c80;
+    text-decoration: none;
+    font-weight: 600;
+}
