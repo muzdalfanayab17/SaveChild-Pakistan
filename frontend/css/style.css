@@ -23,14 +23,12 @@ body {
 /* =========================
    NAVBAR
 ========================= */
-
-nav {
+.navbar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 28px;
-    padding: 20px 7%;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 6%;
     background: #ffffff;
     border-bottom: 1px solid #e8edf2;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
@@ -39,18 +37,44 @@ nav {
     z-index: 1000;
 }
 
-nav a {
+.nav-links,
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
     color: #26384a;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
-nav a:hover {
+.navbar a:hover {
     color: #167c80;
 }
 
+.auth-links a:last-child {
+    padding: 9px 16px;
+    background: #167c80;
+    color: white;
+    border-radius: 7px;
+}
+
+.auth-links a {
+    padding: 9px 16px;
+    border-radius: 7px;
+    background: #167c80;
+    color: white;
+}
+
+.auth-links a:hover {
+    background: #105f63;
+    color: white;
+}
 
 /* =========================
    HERO
@@ -214,22 +238,22 @@ footer p {
     margin: 10px 0;
 }
 
-footer nav {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    position: static;
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px 0;
 }
 
-footer nav a {
+.footer-nav a {
     color: #d4e0e8;
+    text-decoration: none;
 }
 
-footer nav a:hover {
+.footer-nav a:hover {
     color: white;
 }
-
 
 /* =========================
    MOBILE
@@ -448,4 +472,533 @@ footer nav a:hover {
     color: #167c80;
     text-decoration: none;
     font-weight: 600;
+}
+/*============================================*/
+.more-menu {
+    position: relative;
+}
+
+.more-menu summary {
+    cursor: pointer;
+    list-style: none;
+    color: #26384a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.more-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 210px;
+
+    margin-top: 12px;
+    padding: 8px 0;
+
+    background: white;
+    border: 1px solid #e5ecef;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(30, 60, 80, 0.12);
+
+    z-index: 2000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 11px 15px;
+
+    color: #26384a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background: #f0f8f8;
+    color: #167c80;
+}
+/*================================================*/
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+/* ================================
+   REPORT PAGE
+================================ */
+
+.report-section {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.report-section h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #173b5f;
+}
+
+.report-section > p {
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #526b82;
+}
+
+#reportForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#reportForm label {
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #173b5f;
+}
+
+#reportForm input,
+#reportForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd8e3;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#reportForm input:focus,
+#reportForm textarea:focus {
+    outline: none;
+    border-color: #16838a;
+}
+
+#reportForm textarea {
+    resize: vertical;
+}
+
+#reportForm button {
+    width: 180px;
+    padding: 12px;
+    margin: 10px auto 0;
+    border: none;
+    border-radius: 8px;
+    background: #16838a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#reportForm button:hover {
+    background: #126d73;
+}
+
+#message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+.back-home {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #173b5f;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-home:hover {
+    background: #126d73;
+}
+/* =========================================
+   CHILD SAFETY PAGE
+   ========================================= */
+
+/* Main safety sections */
+.intro-safety,
+.age-groups,
+.safety-topic,
+.situations,
+.safety-steps,
+.trusted-adults,
+.safety-tips,
+.learning-games,
+.learning-videos,
+.help-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 45px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Introduction */
+.intro-safety {
+    margin-top: 50px;
+}
+
+.intro-safety h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #173b5f;
+    margin-bottom: 15px;
+}
+
+.intro-safety h2 {
+    text-align: center;
+    color: #16838a;
+    margin-bottom: 30px;
+}
+
+
+/* Details / FAQ style */
+.intro-safety details {
+    margin-bottom: 15px;
+    padding: 18px 20px;
+    background: #f5fafb;
+    border-radius: 10px;
+    border: 1px solid #dcebed;
+}
+
+.intro-safety summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #173b5f;
+}
+
+.intro-safety details p {
+    margin-top: 15px;
+    line-height: 1.7;
+    color: #526b82;
+}
+
+.intro-safety details ul {
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+.intro-safety details li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* Age Groups */
+.age-groups {
+    background: #f7fafc;
+}
+
+.age-groups h2,
+.safety-topic h2,
+.situations h2,
+.safety-steps h2,
+.trusted-adults h2,
+.safety-tips h2,
+.learning-games h2,
+.learning-videos h2,
+.help-section h2 {
+    text-align: center;
+    color: #173b5f;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.age-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.age-card {
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #dcebed;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.age-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.age-card h3 {
+    color: #16838a;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.age-card p {
+    color: #526b82;
+    line-height: 1.6;
+}
+
+
+/* General Safety Topics */
+.safety-topic p,
+.trusted-adults p,
+.learning-games > p,
+.learning-videos > p,
+.help-section p {
+    line-height: 1.7;
+    color: #526b82;
+    margin-bottom: 20px;
+}
+
+.safety-topic h3 {
+    color: #16838a;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.safety-topic ul,
+.trusted-adults ul,
+.safety-tips ul {
+    padding-left: 25px;
+}
+
+.safety-topic li,
+.trusted-adults li,
+.safety-tips li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #526b82;
+}
+
+
+/* Safe / Unsafe Situations */
+.situation-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.situation-card {
+    padding: 30px;
+    border-radius: 14px;
+    background: #f5fafb;
+    border: 1px solid #dcebed;
+}
+
+.situation-card h3 {
+    color: #16838a;
+    margin-bottom: 15px;
+}
+
+.situation-card ul {
+    padding-left: 20px;
+}
+
+.situation-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #526b82;
+}
+
+
+/* Steps */
+.safety-steps ol {
+    max-width: 800px;
+    margin: auto;
+    padding-left: 25px;
+}
+
+.safety-steps li {
+    margin-bottom: 15px;
+    padding-left: 8px;
+    line-height: 1.6;
+    color: #526b82;
+}
+
+
+/* Games */
+.learning-games {
+    background: #f7fafc;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #dcebed;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.game-card h3 {
+    color: #16838a;
+    margin-bottom: 12px;
+}
+
+.game-card p {
+    color: #526b82;
+    line-height: 1.6;
+}
+
+
+/* Videos */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.video-card {
+    padding: 30px;
+    background: #f5fafb;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #dcebed;
+}
+
+.video-card h3 {
+    color: #16838a;
+    margin-bottom: 12px;
+}
+
+.video-card p {
+    color: #526b82;
+    line-height: 1.6;
+}
+
+
+/* Help Section */
+.help-section {
+    text-align: center;
+    background: #eaf8f7;
+}
+
+.help-section a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 22px;
+    background: #16838a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.help-section a:hover {
+    background: #126d73;
+}
+
+
+/* Back to Home */
+main > a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 60px;
+    padding: 11px 20px;
+    background: #173b5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+main > a:hover {
+    background: #126d73;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .age-container,
+    .game-container,
+    .video-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .situation-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-safety,
+    .age-groups,
+    .safety-topic,
+    .situations,
+    .safety-steps,
+    .trusted-adults,
+    .safety-tips,
+    .learning-games,
+    .learning-videos,
+    .help-section {
+        margin: 40px 20px;
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .age-container,
+    .game-container,
+    .video-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-safety h1 {
+        font-size: 36px;
+    }
+
+    .age-groups h2,
+    .safety-topic h2,
+    .situations h2,
+    .safety-steps h2,
+    .trusted-adults h2,
+    .safety-tips h2,
+    .learning-games h2,
+    .learning-videos h2,
+    .help-section h2 {
+        font-size: 26px;
+    }
+
+    .intro-safety,
+    .age-groups,
+    .safety-topic,
+    .situations,
+    .safety-steps,
+    .trusted-adults,
+    .safety-tips,
+    .learning-games,
+    .learning-videos,
+    .help-section {
+        padding: 22px;
+    }
 }
