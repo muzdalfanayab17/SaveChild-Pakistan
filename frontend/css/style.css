@@ -991,6 +991,7 @@ main > a:hover {
 
     .intro-safety,
     .age-groups,
+
     .safety-topic,
     .situations,
     .safety-steps,
@@ -1002,3 +1003,159 @@ main > a:hover {
         padding: 22px;
     }
 }
+
+
+.age-card a {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+    background-color: #33929e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* =========================================
+   SAFETY ADVENTURE PAGE
+========================================= */
+
+.adventure-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Top heading */
+
+.adventure-intro {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.adventure-intro h1 {
+    color: #173b5f;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.adventure-intro p {
+    color: #526b82;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Choose a Safety Topic heading */
+
+.adventure-section > h2 {
+    text-align: center;
+    color: #173b5f;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* Cards container */
+
+.topic-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* Individual cards */
+
+.topic-card {
+    background: #f8fbfc;
+    padding: 30px;
+    text-align: center;
+
+    border: 1px solid #dcebed;
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Card headings */
+
+.topic-card h2 {
+    color: #16838a;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* Card text */
+
+.topic-card p {
+    color: #526b82;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Card buttons */
+
+.topic-card a {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background: #16838a;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 7px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.topic-card a:hover {
+    background: #10676d;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .adventure-section {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    .adventure-intro h1 {
+        font-size: 32px;
+    }
+
+    .topic-container {
+        grid-template-columns: 1fr;
+    }
+}
+.adventure-intro h1 {
+    color: #16838a;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.adventure-section > h2 {
+    text-align: center;
+    color: #173b5f;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
